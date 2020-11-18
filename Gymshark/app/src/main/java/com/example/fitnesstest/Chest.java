@@ -2,6 +2,7 @@ package com.example.fitnesstest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -14,7 +15,7 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-public class StartWorkAct extends AppCompatActivity {
+public class Chest extends AppCompatActivity {
 
     public TextView intropage, subintropage, fitonetitle, fitonedesc, timerValue, btnexercise;
     public View divpage, bgprogress;
@@ -31,7 +32,7 @@ public class StartWorkAct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start_work);
+        setContentView(R.layout.chest);
 
         //Load Animations
         btthree = AnimationUtils.loadAnimation(this, R.anim.btthree);
@@ -65,6 +66,14 @@ public class StartWorkAct extends AppCompatActivity {
         imgTimer.startAnimation(alphago);
 
         startTimer();
+        btnexercise.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(Chest.this,WorkoutAct.class);
+                a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(a);
+            }
+        });
     }
 
     private void startTimer(){

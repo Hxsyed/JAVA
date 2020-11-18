@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:src="@drawable/chest"
+            android:src="@drawable/shoulder"
             android:layout_width="110dp"
             android:layout_height="70dp"/>
 
@@ -75,7 +75,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="6dp"
         android:lineSpacingExtra="5dp"
-        android:text="You can add here whatever related  \nto your exercises."
+        android:text=" 1) 6 sets of Shoulder Press \n 2) 6 sets of Arnold Press \n 3) 4 sets of Military Press \n 4) 4 sets of Barbell Overhead Press \n 5) 6 sets of Lateral Raise"
         android:textColor="#3A3A3A"
         android:textSize="16sp"
         app:fontFamily="sans-serif"

@@ -12,14 +12,14 @@ import android.widget.TextView;
 
 public class WorkoutAct extends AppCompatActivity {
 
-    TextView titlepage, subtitlepage, intropage, subintropage, btnexercise, fitonetitle, fitonedesc, fittwotitle, fittwodesc, fitthreetitle,
+     public TextView titlepage, subtitlepage, intropage, subintropage, btnexercise, fitonetitle, fitonedesc, fittwotitle, fittwodesc, fitthreetitle,
     fitthreedesc, fitfourtitle, fitfourdesc;
 
-    View divpage, bgprogress;
+    public View divpage, bgprogress;
 
-    Animation bttone, bttwo, bttfour, bttfive, bttsix, bttseven, btteight;
+    public Animation bttone, bttwo, bttfour, bttfive, bttsix, bttseven, btteight;
 
-    LinearLayout fitone, fittwo, fitthree, fitfour;
+    public LinearLayout fitone, fittwo, fitthree, fitfour;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,42 @@ public class WorkoutAct extends AppCompatActivity {
         fitthreedesc = (TextView) findViewById(R.id.fitthreedesc);
         fitfourtitle = (TextView) findViewById(R.id.fitfourtitle);
         fitfourdesc = (TextView) findViewById(R.id.fitfourdesc);
+
+        fitonetitle.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(WorkoutAct.this,Chest.class);
+                a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(a);
+            }
+        });
+
+        fittwotitle.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(WorkoutAct.this,Bicep.class);
+                a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(a);
+            }
+        });
+
+        fitthreetitle.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(WorkoutAct.this,Shoulder.class);
+                a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(a);
+            }
+        });
+
+        fitfourtitle.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(WorkoutAct.this,Leg.class);
+                a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(a);
+            }
+        });
 
         //give an event to another page
         btnexercise.setOnClickListener(new View.OnClickListener(){
