@@ -22,7 +22,7 @@ public class Leg extends AppCompatActivity {
     public LinearLayout fitone;
     public ImageView imgTimer;
 
-    private static final long START_TIME_IN_MILLIS = 601500;
+    private static final long START_TIME_IN_MILLIS = 3601500;
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;

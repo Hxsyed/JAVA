@@ -74,14 +74,14 @@ public class MainActivity extends AppCompatActivity {
         previousQuotes = new Stack<>();
 
         index = getRandomQuote(allQuotes.length-1);
-        quoteText.setText(allQuotes[index]+" -- "+ allAuthors[index]);
+        quoteText.setText(allQuotes[index]+" ~~ "+ allAuthors[index]);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 index = getRandomQuote(allQuotes.length-1);
-                quoteText.setText(allQuotes[index]+" -- "+ allAuthors[index]);
-                previousQuotes.push(allQuotes[index]+" -- "+ allAuthors[index]);
+                quoteText.setText(allQuotes[index]+" ~~ "+ allAuthors[index]);
+                previousQuotes.push(allQuotes[index]+" ~~ "+ allAuthors[index]);
             }
         });
 

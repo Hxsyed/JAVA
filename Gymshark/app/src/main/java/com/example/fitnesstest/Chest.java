@@ -22,7 +22,7 @@ public class Chest extends AppCompatActivity {
     public LinearLayout fitone;
     public ImageView imgTimer;
 
-    private static final long START_TIME_IN_MILLIS = 601500;
+    private static final long START_TIME_IN_MILLIS = 3601500;
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
@@ -69,7 +69,7 @@ public class Chest extends AppCompatActivity {
         nextexercise.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent a = new Intent(Chest.this,Bicep.class);
+                Intent a = new Intent(Chest.this,MainActivity.class);
                 a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(a);
             }

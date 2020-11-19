@@ -12,14 +12,14 @@ import android.widget.TextView;
 
 public class WorkoutAct extends AppCompatActivity {
 
-     public TextView titlepage, subtitlepage, intropage, subintropage, btnexercise, fitonetitle, fitonedesc, fittwotitle, fittwodesc, fitthreetitle,
-    fitthreedesc, fitfourtitle, fitfourdesc;
+     public TextView titlepage, subtitlepage, intropage, subintropage, fitonetitle, fitonedesc, fittwotitle, fittwodesc, fitthreetitle,
+    fitthreedesc, fitfourtitle, fitfourdesc, fitfivetitle,fitfivedesc;
 
-    public View divpage, bgprogress;
+    public View divpage;
 
     public Animation bttone, bttwo, bttfour, bttfive, bttsix, bttseven, btteight;
 
-    public LinearLayout fitone, fittwo, fitthree, fitfour;
+    public LinearLayout fitone, fittwo, fitthree, fitfour, fitfive;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,6 @@ public class WorkoutAct extends AppCompatActivity {
         subtitlepage = (TextView) findViewById(R.id.subtitlepage);
         intropage = (TextView) findViewById(R.id.intropage);
         subintropage = (TextView) findViewById(R.id.subintropage);
-        btnexercise = (TextView) findViewById(R.id.btnexercise);
         fitonetitle = (TextView) findViewById(R.id.fitonetitle);
         fitonedesc = (TextView) findViewById(R.id.fitonedesc);
         fittwotitle = (TextView) findViewById(R.id.fittwotitle);
@@ -48,6 +47,8 @@ public class WorkoutAct extends AppCompatActivity {
         fitthreedesc = (TextView) findViewById(R.id.fitthreedesc);
         fitfourtitle = (TextView) findViewById(R.id.fitfourtitle);
         fitfourdesc = (TextView) findViewById(R.id.fitfourdesc);
+        fitfivetitle = (TextView) findViewById(R.id.fitfivetitle);
+        fitfivedesc = (TextView) findViewById(R.id.fitfivedesc);
 
         fitonetitle.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -70,13 +71,21 @@ public class WorkoutAct extends AppCompatActivity {
         fitthreetitle.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent a = new Intent(WorkoutAct.this,Shoulder.class);
+                Intent a = new Intent(WorkoutAct.this,Back.class);
                 a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(a);
             }
         });
 
         fitfourtitle.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(WorkoutAct.this,Shoulder.class);
+                a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(a);
+            }
+        });
+       fitfivetitle.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent a = new Intent(WorkoutAct.this,Leg.class);
@@ -89,9 +98,9 @@ public class WorkoutAct extends AppCompatActivity {
         fittwo = (LinearLayout) findViewById(R.id.fittwo);
         fitthree = (LinearLayout) findViewById(R.id.fitthree);
         fitfour = (LinearLayout) findViewById(R.id.fitfour);
+        fitfive = (LinearLayout) findViewById(R.id.fitfive);
 
         divpage = (View) findViewById(R.id.divpage);
-        bgprogress = (View) findViewById(R.id.bgprogress);
 
         //assign the animation
         titlepage.startAnimation(bttone);
@@ -105,8 +114,14 @@ public class WorkoutAct extends AppCompatActivity {
         fittwo.startAnimation(bttfour);
         fitthree.startAnimation(bttfive);
         fitfour.startAnimation(bttsix);
-
-        btnexercise.startAnimation(btteight);
-        bgprogress.startAnimation(bttseven);
+        fitfive.startAnimation(bttsix);
     }
+    @Override
+    public void onBackPressed()
+    {
+        Intent a = new Intent(WorkoutAct.this,MainActivity.class);
+        startActivity(a);
+        finish();
+    }
+
 }

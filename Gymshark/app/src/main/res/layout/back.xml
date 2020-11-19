@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:src="@drawable/bicep"
+            android:src="@drawable/back"
             android:layout_width="110dp"
             android:layout_height="70dp"/>
 
@@ -35,7 +35,7 @@
                 android:id="@+id/fitonetitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bicep + Tricep Workout"
+                android:text="Back Workout"
                 android:textColor="#000000"
                 android:textSize="17sp"
                 app:fontFamily="@font/audiowide" />
@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Tuesday's Workout"
+                android:text="Wednesday's Workout"
                 android:textColor="#3A3A3A"
                 android:textSize="15sp"
                 />
@@ -75,7 +75,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="6dp"
         android:lineSpacingExtra="5dp"
-        android:text=" 1) 6 sets of Curls \n 2) 6 sets of Dumbell Hammer Curls \n 3) 6 sets of Machine Bicep Curl \n 4) 4 sets of Cable Curl \n 5) 4 sets of 10 Pullups"
+        android:text=" 1) 4 sets of Wide-Grip Pull-Ups\n 2) 4 sets of Wide-Grip Lat Pulldown\n 3) 4 sets of Seated Cable Row\n 4) 4 sets of standing T-bar Row\n 5) 4 sets of prone Dumbbell Row"
         android:textColor="#3A3A3A"
         android:textSize="16sp"
         app:fontFamily="sans-serif"

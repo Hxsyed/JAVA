@@ -63,12 +63,12 @@
 
     <TextView
         android:id="@+id/subintropage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="362dp"
+        android:layout_height="65dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
         android:lineSpacingExtra="5dp"
-        android:text="Full 40 minutes body workout consisting of chest,\nbicep, shoulder, and leg workouts. \nLets start with the Chest workout !"
+        android:text="Body workout consisting of chest, bicep, shoulder, and leg workouts. Lets start with the Chest workout !"
         android:textColor="@color/Black"
         android:textSize="16sp"
         app:fontFamily="sans-serif"
@@ -113,7 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="10 Minutes"
+                android:text="Monday's Workout"
                 android:textColor="@color/Black"
                 android:textSize="15sp" />
 
@@ -123,33 +123,33 @@
 
     <LinearLayout
         android:id="@+id/fittwo"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fitone">
 
         <ImageView
-            android:src="@drawable/bicep"
             android:layout_width="110dp"
-            android:layout_height="70dp"/>
+            android:layout_height="70dp"
+            android:src="@drawable/bicep" />
 
         <LinearLayout
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/fittwotitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bicep Workout"
+                android:text="Bicep + Tricep Workout"
                 android:textColor="#000000"
                 android:textSize="17sp"
                 app:fontFamily="@font/audiowide" />
@@ -158,11 +158,10 @@
                 android:id="@+id/fittwodesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="10 Minutes"
                 android:layout_marginTop="5dp"
+                android:text="Tuesday's Workout"
                 android:textColor="@color/Black"
-                android:textSize="15sp"
-                />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -170,33 +169,33 @@
 
     <LinearLayout
         android:id="@+id/fitthree"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fittwo">
 
         <ImageView
-            android:src="@drawable/shoulder"
             android:layout_width="110dp"
-            android:layout_height="70dp"/>
+            android:layout_height="70dp"
+            android:src="@drawable/back" />
 
         <LinearLayout
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/fitthreetitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Shoulder Workout"
+                android:text="Back Workout"
                 android:textColor="#000000"
                 android:textSize="17sp"
                 app:fontFamily="@font/audiowide" />
@@ -205,11 +204,10 @@
                 android:id="@+id/fitthreedesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="10 Minutes"
                 android:layout_marginTop="5dp"
+                android:text="Wednesday's Workout"
                 android:textColor="@color/Black"
-                android:textSize="15sp"
-                 />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -217,33 +215,33 @@
 
     <LinearLayout
         android:id="@+id/fitfour"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fitthree">
 
         <ImageView
-            android:src="@drawable/leg"
             android:layout_width="110dp"
-            android:layout_height="70dp"/>
+            android:layout_height="70dp"
+            android:src="@drawable/shoulder" />
 
         <LinearLayout
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/fitfourtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Leg Workout"
+                android:text="Shoulder Workout"
                 android:textColor="#000000"
                 android:textSize="17sp"
                 app:fontFamily="@font/audiowide" />
@@ -252,43 +250,60 @@
                 android:id="@+id/fitfourdesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="10 Minutes"
                 android:layout_marginTop="5dp"
+                android:text="Thrusday's Workout"
                 android:textColor="@color/Black"
-                android:textSize="15sp"
-                />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <View
-        android:id="@+id/bgprogress"
-        android:background="@color/Black"
+    <LinearLayout
+        android:id="@+id/fitfive"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-
-    <TextView
-        android:id="@+id/btnexercise"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:gravity="center"
-        android:text="CONTINUE WORKOUT"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:fontFamily="@font/audiowide"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/fitfour">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:src="@drawable/leg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fitfivetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leg Workout"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:fontFamily="@font/audiowide" />
+
+            <TextView
+                android:id="@+id/fitfivedesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Friday's Workout"
+                android:textColor="@color/Black"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-public class Shoulder extends AppCompatActivity {
+public class Back extends AppCompatActivity {
 
     public TextView intropage, subintropage, fitonetitle, fitonedesc, timerValue, nextexercise;
     public View divpage, bgprogress;
@@ -32,7 +32,7 @@ public class Shoulder extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.shoulder);
+        setContentView(R.layout.back);
 
         //Load Animations
         btthree = AnimationUtils.loadAnimation(this, R.anim.btthree);
@@ -69,7 +69,7 @@ public class Shoulder extends AppCompatActivity {
         nextexercise.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent a = new Intent(Shoulder.this,MainActivity.class);
+                Intent a = new Intent(Back.this,MainActivity.class);
                 a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(a);
             }
@@ -99,11 +99,10 @@ public class Shoulder extends AppCompatActivity {
         String timeLeft = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds) ;
         timerValue.setText(timeLeft);
     }
-
     @Override
     public void onBackPressed()
     {
-        Intent a = new Intent(Shoulder.this,WorkoutAct.class);
+        Intent a = new Intent(Back.this,WorkoutAct.class);
         startActivity(a);
         finish();
     }

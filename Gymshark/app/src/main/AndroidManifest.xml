@@ -13,6 +13,7 @@
         <activity android:name=".Bicep"></activity>
         <activity android:name=".Shoulder"></activity>
         <activity android:name=".Leg"></activity>
+        <activity android:name=".Back"></activity>
         <activity android:name=".WorkoutAct" />
         <activity android:name=".MainActivity">
             <intent-filter>
