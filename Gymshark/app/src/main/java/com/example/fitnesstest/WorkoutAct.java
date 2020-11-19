@@ -85,16 +85,6 @@ public class WorkoutAct extends AppCompatActivity {
             }
         });
 
-        //give an event to another page
-        btnexercise.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent a = new Intent(WorkoutAct.this,StartWorkAct.class);
-                a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(a);
-            }
-        });
-
         fitone = (LinearLayout) findViewById(R.id.fitone);
         fittwo = (LinearLayout) findViewById(R.id.fittwo);
         fitthree = (LinearLayout) findViewById(R.id.fitthree);

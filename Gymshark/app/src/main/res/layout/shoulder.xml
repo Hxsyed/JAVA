@@ -35,7 +35,7 @@
                 android:id="@+id/fitonetitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chest Workout"
+                android:text="Shoulder Workout"
                 android:textColor="#000000"
                 android:textSize="17sp"
                 app:fontFamily="@font/audiowide" />
@@ -99,28 +99,28 @@
         android:id="@+id/timerValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="8dp"
         android:text="00:00"
         android:textColor="@color/Black"
         android:textSize="68sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divpage"/>
+        app:layout_constraintTop_toBottomOf="@id/divpage" />
 
     <ImageView
         android:id="@+id/imgtimer"
         android:layout_width="320dp"
         android:layout_height="320dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
         android:src="@drawable/clock"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divpage"/>
+        app:layout_constraintTop_toBottomOf="@id/divpage" />
 
     <View
         android:id="@+id/bgprogress"
@@ -134,14 +134,14 @@
         />
 
     <TextView
-        android:id="@+id/btnexercise"
+        android:id="@+id/nextexercise"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:gravity="center"
-        android:text="CONTINUE WORKOUT"
+        android:text="NEXT WORKOUT"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"

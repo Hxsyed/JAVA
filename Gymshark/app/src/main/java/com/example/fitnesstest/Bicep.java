@@ -17,7 +17,7 @@ import java.util.Locale;
 
 public class Bicep extends AppCompatActivity {
 
-    public TextView intropage, subintropage, fitonetitle, fitonedesc, timerValue, btnexercise;
+    public TextView intropage, subintropage, fitonetitle, fitonedesc, timerValue, nextexercise;
     public View divpage, bgprogress;
     public LinearLayout fitone;
     public ImageView imgTimer;
@@ -46,7 +46,7 @@ public class Bicep extends AppCompatActivity {
         fitonetitle = (TextView) findViewById(R.id.fitonetitle);
         fitonedesc = (TextView) findViewById(R.id.fitonedesc);
         timerValue = (TextView) findViewById(R.id.timerValue);
-        btnexercise = (TextView) findViewById(R.id.btnexercise);
+        nextexercise = (TextView) findViewById(R.id.nextexercise);
 
         divpage = (View) findViewById(R.id.divpage);
         bgprogress = (View) findViewById(R.id.bgprogress);
@@ -56,7 +56,7 @@ public class Bicep extends AppCompatActivity {
         imgTimer = (ImageView) findViewById(R.id.imgtimer);
 
         //assign animation
-        btnexercise.startAnimation(bttfour);
+        nextexercise.startAnimation(bttfour);
         bgprogress.startAnimation(btthree);
         fitone.startAnimation(ttbone);
         intropage.startAnimation(ttbtwo);
@@ -66,10 +66,10 @@ public class Bicep extends AppCompatActivity {
         imgTimer.startAnimation(alphago);
 
         startTimer();
-        btnexercise.setOnClickListener(new View.OnClickListener(){
+        nextexercise.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent a = new Intent(Bicep.this,WorkoutAct.class);
+                Intent a = new Intent(Bicep.this,Shoulder.class);
                 a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(a);
             }
@@ -98,6 +98,13 @@ public class Bicep extends AppCompatActivity {
 
         String timeLeft = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds) ;
         timerValue.setText(timeLeft);
+    }
+    @Override
+    public void onBackPressed()
+    {
+        Intent a = new Intent(Bicep.this,WorkoutAct.class);
+        startActivity(a);
+        finish();
     }
 
 }

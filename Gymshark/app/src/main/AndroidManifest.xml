@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartWorkAct"></activity>
         <activity android:name=".Chest"></activity>
         <activity android:name=".Bicep"></activity>
         <activity android:name=".Shoulder"></activity>

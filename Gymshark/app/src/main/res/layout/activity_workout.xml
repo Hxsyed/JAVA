@@ -39,14 +39,13 @@
         android:id="@+id/divpage"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="26dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="26dp"
         android:background="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/subtitlepage"
-        />
+        app:layout_constraintTop_toBottomOf="@id/subtitlepage" />
 
     <TextView
         android:id="@+id/intropage"
@@ -67,9 +66,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="12dp"
         android:lineSpacingExtra="5dp"
-        android:text="Choose the body part you are working out on \nand follow the steps!"
+        android:text="Full 40 minutes body workout consisting of chest,\nbicep, shoulder, and leg workouts. \nLets start with the Chest workout !"
         android:textColor="@color/Black"
         android:textSize="16sp"
         app:fontFamily="sans-serif"
@@ -78,26 +77,26 @@
 
     <LinearLayout
         android:id="@+id/fitone"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subintropage">
 
         <ImageView
-            android:src="@drawable/chest"
             android:layout_width="110dp"
-            android:layout_height="70dp"/>
+            android:layout_height="70dp"
+            android:src="@drawable/chest" />
 
         <LinearLayout
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
             <TextView
@@ -116,8 +115,7 @@
                 android:layout_marginTop="5dp"
                 android:text="10 Minutes"
                 android:textColor="@color/Black"
-                android:textSize="15sp"
-                />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
