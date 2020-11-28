@@ -110,7 +110,7 @@ public class WorkoutAct extends AppCompatActivity {
         intropage.startAnimation(bttwo);
         subintropage.startAnimation(bttwo);
 
-        fitone.startAnimation(bttwo);
+        fitone.startAnimation(bttfour);
         fittwo.startAnimation(bttfour);
         fitthree.startAnimation(bttfive);
         fitfour.startAnimation(bttsix);

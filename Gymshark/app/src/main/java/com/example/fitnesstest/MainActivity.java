@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public TextView titlepage, subtitlepage, btnexercise, quoteText;
     public ImageView imgpage;
     public Animation animimgpage, bttone, bttwo, btthree, lefttoright;
-    public View bgprogress, bgprogresstop;
+    public View bgprogress;
     public Button nextButton, prevButton;
     public Stack<String> previousQuotes;
     public int index;
@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         prevButton = (Button)findViewById(R.id.backbutton);
 
         bgprogress = (View) findViewById(R.id.bgprogress);
-//        bgprogresstop = (View) findViewById(R.id.bgprogresstop);
 
         imgpage.startAnimation(animimgpage);
         titlepage.startAnimation(bttone);
@@ -56,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
         btnexercise.startAnimation(btthree);
         bgprogress.startAnimation(bttwo);
-//        bgprogresstop.startAnimation(lefttoright);
 
         //give an event to another page
         btnexercise.setOnClickListener(new View.OnClickListener(){
@@ -100,5 +98,13 @@ public class MainActivity extends AppCompatActivity {
 
     public int getRandomQuote(int length){
         return (int) (Math.random() * length) + 1;
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        Intent a = new Intent(MainActivity.this,MainActivity.class);
+        startActivity(a);
+        finish();
     }
 }

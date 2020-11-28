@@ -63,12 +63,12 @@
 
     <TextView
         android:id="@+id/subintropage"
-        android:layout_width="362dp"
-        android:layout_height="65dp"
+        android:layout_width="358dp"
+        android:layout_height="74dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
         android:lineSpacingExtra="5dp"
-        android:text="Body workout consisting of chest, bicep, shoulder, and leg workouts. Lets start with the Chest workout !"
+        android:text="A full week body workout consisting of chest, bicep, shoulder, and leg workouts. Each set consists of 8-10 reps! Lets Begin!"
         android:textColor="@color/Black"
         android:textSize="16sp"
         app:fontFamily="sans-serif"

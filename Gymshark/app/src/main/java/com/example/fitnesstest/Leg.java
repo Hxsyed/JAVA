@@ -17,12 +17,12 @@ import java.util.Locale;
 
 public class Leg extends AppCompatActivity {
 
-    public TextView intropage, subintropage, fitonetitle, fitonedesc, timerValue, nextexercise;
+    public TextView intropage, subintropage, fitonetitle, fitonedesc, timerValue, nextexercise,startexercise;
     public View divpage, bgprogress;
     public LinearLayout fitone;
     public ImageView imgTimer;
 
-    private static final long START_TIME_IN_MILLIS = 3601500;
+    private static final long START_TIME_IN_MILLIS = 3600100;
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
@@ -47,6 +47,7 @@ public class Leg extends AppCompatActivity {
         fitonedesc = (TextView) findViewById(R.id.fitonedesc);
         timerValue = (TextView) findViewById(R.id.timerValue);
         nextexercise = (TextView) findViewById(R.id.nextexercise);
+        startexercise = (TextView) findViewById(R.id.startexercise);
 
         divpage = (View) findViewById(R.id.divpage);
         bgprogress = (View) findViewById(R.id.bgprogress);
@@ -57,6 +58,7 @@ public class Leg extends AppCompatActivity {
 
         //assign animation
         nextexercise.startAnimation(bttfour);
+        startexercise.startAnimation(bttfour);
         bgprogress.startAnimation(btthree);
         fitone.startAnimation(ttbone);
         intropage.startAnimation(ttbtwo);
@@ -65,7 +67,6 @@ public class Leg extends AppCompatActivity {
         timerValue.startAnimation(alphago);
         imgTimer.startAnimation(alphago);
 
-        startTimer();
         nextexercise.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -74,8 +75,16 @@ public class Leg extends AppCompatActivity {
                 startActivity(a);
             }
         });
+        startexercise.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if(mTimerRunning){
+                    pauseTime();
+                } else
+                    startTimer();
+            }
+        });
     }
-
     private void startTimer(){
         countDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
             @Override
@@ -86,10 +95,13 @@ public class Leg extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                mTimerRunning = false;
+                startexercise.setText("START");
                 Toast.makeText(getApplicationContext(),"Done!", Toast.LENGTH_SHORT).show();
             }
         }.start();
         mTimerRunning = true;
+        startexercise.setText("PAUSE");
     }
 
     private void updateCountDownText(){
@@ -98,6 +110,12 @@ public class Leg extends AppCompatActivity {
 
         String timeLeft = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds) ;
         timerValue.setText(timeLeft);
+    }
+
+    private void pauseTime(){
+        countDownTimer.cancel();
+        mTimerRunning = false;
+        startexercise.setText("START");
     }
 
     @Override
